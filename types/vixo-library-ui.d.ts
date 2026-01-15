@@ -1,4 +1,6 @@
 import * as i0 from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 
 declare class VixoBalanceUI {
     total: number;
@@ -20,5 +22,17 @@ declare class RecordModalComponent {
     static ɵcmp: i0.ɵɵComponentDeclaration<RecordModalComponent, "vixo-record-modal-ui", never, { "data": { "alias": "data"; "required": false; }; }, {}, never, never, true, never>;
 }
 
-export { RecordModalComponent, VixoBalanceUI };
+declare class AddRecordContentComponent {
+    private fb;
+    dialogRef: MatDialogRef<any, any>;
+    readonly data: any;
+    readonly formData: FormGroup;
+    constructor(fb: FormBuilder);
+    onCancelButtonClick(): void;
+    onAddButtonClick(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<AddRecordContentComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<AddRecordContentComponent, "vixo-add-record-form-content-ui", never, {}, {}, never, never, true, never>;
+}
+
+export { AddRecordContentComponent, RecordModalComponent, VixoBalanceUI };
 export type { RecordModalI };
